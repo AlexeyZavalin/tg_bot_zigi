@@ -25,13 +25,14 @@ if __name__ == '__main__':
 
     TOKEN = config.get('TOKEN')
     CHANNEL_ID = config.get('CHANNEL_ID')
+    TROVO_TOKEN = config.get('TROVO_TOKEN')
     url = config.get('trovo_url')
     """Start the bot."""
     bot = ExtBot(TOKEN)
 
     service = ServiceStateTrovo(
         url=url,
-        token=''
+        token=TROVO_TOKEN
     )
 
     loop = asyncio.get_event_loop()
